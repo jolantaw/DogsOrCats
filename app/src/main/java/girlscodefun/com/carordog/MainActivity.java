@@ -14,7 +14,9 @@ public class MainActivity extends AppCompatActivity {
     Boolean /boolean -prawda lub fałsz
      */
 
-    int dogVotesCounter =0;
+    int dogVotesCounter = 0;
+    int catVotesCounter = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,19 +24,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void voteForDog(View view){
-        TextView dogVotes =(TextView)findViewById(R.id.dog_votes);
+    public void voteForDog(View view) {
+        TextView dogVotes = (TextView) findViewById(R.id.dog_votes);
 
         dogVotesCounter = dogVotesCounter + 1;
 
-        dogVotes.setText( "" + dogVotesCounter );
+        dogVotes.setText("" + dogVotesCounter);
 
     }
-    public class MainActivity extends AppCompatActivity {
 
-        int catVotesCounter =0;
+    public void voteForCat(View view) {
+            TextView catVotes = (TextView) findViewById(R.id.cat_votes);
+
+            catVotesCounter = catVotesCounter + 1;
+
+            catVotes.setText("" + catVotesCounter);
 
 
-
+        }
     }
-}
